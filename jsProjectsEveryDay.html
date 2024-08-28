@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="imgs/browser-website-svgrepo-com.svg"
+      type="image/x-icon" />
+    <!-- normalise css -->
+    <link rel="preload" href="normalize.css" as="style" />
+    <link
+      rel="stylesheet"
+      href="normalize.css"
+      media="print"
+      onload="this.media='all'" />
+    <!-- css file -->
+    <link rel="preload" href="jsProjectsEveryDay.css" as="style" />
+    <link
+      rel="stylesheet"
+      href="jsProjectsEveryDay.css"
+      media="print"
+      onload="this.media='all'" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--============================================
+                          --header--                
+    ==============================================-->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24">
+            <path
+              d="M17.168 8H13l.806-4.835A1 1 0 0 0 12.819 2H7.667a1 1 0 0 0-.986.835l-1.667 10A1 1 0 0 0 6 14h4v8l8.01-12.459A1 1 0 0 0 17.168 8z" />
+          </svg>
+          <span>JS-PROJECTS</span>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">who am i</a></li>
+            <li><a href="#">works</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!--============================================
+                          --project 01--                
+    ==============================================-->
+    <section id="projectOne">
+      <div class="container"><h1 class="title">Project One</h1></div>
+      <div class="container">
+        <div
+          class="active panel"
+          style="
+            background-image: url(https://images.unsplash.com/photo-1526779259212-939e64788e3c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1474&q=80);
+          ">
+          <span class="title">seeing the world</span>
+        </div>
+        <div
+          class="panel"
+          style="
+            background-image: url(https://images.unsplash.com/photo-1608149895899-3668a99d00f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80);
+          ">
+          <span class="title">chinese palace</span>
+        </div>
+        <div
+          class="panel"
+          style="
+            background-image: url(https://images.unsplash.com/photo-1527439958599-d15f96255619?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80);
+          ">
+          <span class="title">beautiful forest</span>
+        </div>
+        <div
+          class="panel"
+          style="
+            background-image: url(https://images.unsplash.com/photo-1620677368158-32b1293fac36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80);
+          ">
+          <span class="title">andalusia palace</span>
+        </div>
+        <div
+          class="panel"
+          style="
+            background-image: url(https://images.unsplash.com/photo-1565555178270-2e4b939b06b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80);
+          ">
+          <span class="title">Mont-Saint-Michel, France</span>
+        </div>
+      </div>
+    </section>
+    <!--============================================
+                          --projectTwo--                
+    ==============================================-->
+    <section id="projectTwo">
+      <div class="container"><h1 class="title">Project Two</h1></div>
+      <div class="container main">
+        <ul>
+          <li class="active"><span>1</span></li>
+          <li><span>2</span></li>
+          <li><span>3</span></li>
+          <li><span>4</span></li>
+        </ul>
+        <div class="btns">
+          <button class="prev">Prev</button>
+          <button class="next active">Next</button>
+        </div>
+      </div>
+    </section>
+    <!--============================================
+                          --project three--                
+    ==============================================-->
+    <section id="projectThree">
+      <div class="container">
+        <h1 class="title">Project three: (7)</h1>
+      </div>
+      <div class="container main">
+        <div class="split left">
+          <div class="text">
+            <h2>Playstation 5</h2>
+            <a href="#">BUY NOW</a>
+          </div>
+        </div>
+        <div class="split right">
+          <div class="text">
+            <h2>Xbox Series X</h2>
+            <a href="#">BUY NOW</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--============================================
+                          --project Four--                
+    ==============================================-->
+    <section id="projectFour">
+      <div class="container">
+        <h1 class="title">Project Four: (11)</h1>
+      </div>
+      <div class="container main">
+        <div class="insert hidden">
+          <div class="key">Null<small>event.key</small></div>
+          <div class="key">Null<small>event.keyCode</small></div>
+          <div class="key">Null<small>event.code</small></div>
+          <div class="key">Press any key to get the informations</div>
+        </div>
+      </div>
+    </section>
+    <!--============================================
+                          --project Five--                
+    ==============================================-->
+    <section id="projectFive">
+      <div class="container">
+        <h1 class="title">Project Five: (19)</h1>
+      </div>
+      <div class="container main">
+        <input class="button" type="button" value="Dark mode" />
+        <div class="clock">
+          <span class="needle hours"></span><span class="needle minutes"></span
+          ><span class="needle seconds"></span>
+        </div>
+        <div class="date">
+          <div class="time">9:05 AM</div>
+          <div class="day">Friday, FEB <span class="num">16</span></div>
+        </div>
+      </div>
+    </section>
+    <!--============================================
+                          --project Six--                
+    ==============================================-->
+    <section id="projectSix">
+      <div class="container">
+        <h1 class="title">project six (elzero toDo app with local storage)</h1>
+      </div>
+      <div class="container main">
+        <div class="form">
+          <input type="text" class="input" />
+          <input type="submit" class="add" value="Add Task" />
+        </div>
+        <div class="tasks"></div>
+      </div>
+    </section>
+    <!--============================================
+                          --project seven--                
+    ==============================================-->
+    <section id="projectSeven">
+      <div class="container">
+        <h1 class="title">project Seven (elzero image slider)</h1>
+      </div>
+      <div class="container main">
+        <div class="slider-container">
+          <div id="slide-number" class="slide-number">slide 6</div>
+          <img
+            decoding="async"
+            loading="lazy"
+            src="imgs/projectSlider/photo1.jpg"
+            alt="" />
+          <img
+            decoding="async"
+            loading="lazy"
+            src="imgs/projectSlider/photo2.jpg"
+            alt="" />
+          <img
+            decoding="async"
+            loading="lazy"
+            src="imgs/projectSlider/photo3.jpg"
+            alt="" />
+          <img
+            decoding="async"
+            loading="lazy"
+            src="imgs/projectSlider/photo4.jpg"
+            alt="" />
+          <img
+            decoding="async"
+            loading="lazy"
+            src="imgs/projectSlider/photo5.jpg"
+            alt="" />
+        </div>
+        <div class="slider-controls">
+          <span id="prev" class="prev">Previous</span>
+          <span id="indicators" class="indicators"> </span>
+          <span id="next" class="next">Next</span>
+        </div>
+      </div>
+    </section>
+    <!--============================================
+                          --project  Eight--                
+    ==============================================-->
+    <section id="projectEight">
+      <div class="container">
+        <h1 class="title">project Eight ( 12)</h1>
+      </div>
+      <div class="container main">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq hide">
+          <h3 class="faq-title">Why shouldn't we trust atoms?</h3>
+          <p class="faq-text">They make up everything</p>
+          <button class="faq-toggle show"></button>
+        </div>
+        <div class="faq hide">
+          <h3 class="faq-title">
+            What do you call someone with no body and no nose?
+          </h3>
+          <p class="faq-text">Nobody knows.</p>
+          <button class="faq-toggle"></button>
+        </div>
+        <div class="faq hide">
+          <h3 class="faq-title">
+            What's the object-oriented way to become wealthy?
+          </h3>
+          <p class="faq-text">Inheritance.</p>
+          <button class="faq-toggle"></button>
+        </div>
+        <div class="faq hide">
+          <h3 class="faq-title">
+            How many tickles does it take to tickle an octopus?
+          </h3>
+          <p class="faq-text">Ten-tickles!</p>
+          <button class="faq-toggle"></button>
+        </div>
+        <div class="faq hide">
+          <h3 class="faq-title">What is: 1 + 1?</h3>
+          <p class="faq-text">Depends on who are you asking.</p>
+          <button class="faq-toggle"></button>
+        </div>
+      </div>
+    </section>
+    <!--============================================
+                          --project  nine--                
+    ==============================================-->
+    <section id="projectNine">
+      <div class="container">
+        <h1 class="title">
+          project nine ( 12 intressting project Async use case and drag and
+          drop)
+        </h1>
+      </div>
+      <div class="container main">
+        <div class="empty">
+          <div class="fill" draggable="true"></div>
+        </div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+      </div>
+    </section>
+    <!--============================================
+                          --project  Ten--                
+    ==============================================-->
+    <section id="projectTen">
+      <div class="container">
+        <h1 class="title">project Ten ( 23 kenitic CSS loader)</h1>
+      </div>
+      <div class="container main">
+        <div class="box"></div>
+      </div>
+    </section>
+    <!--============================================
+                          --project  eleven--                
+    ==============================================-->
+    <section id="projectEleven">
+      <div class="container">
+        <h1 class="title">project eleven (16 drink water)</h1>
+      </div>
+      <div class="container main">
+        <h2>Drink water</h2>
+        <h3>Goal : 2 Liters</h3>
+        <div class="cup">
+          <div class="remained">
+            <h3>2L</h3>
+            <span>remained</span>
+          </div>
+          <div class="filled">0%</div>
+        </div>
+        <p>Select how many glasses of water that you have drank</p>
+        <div class="cups">
+          <div class="cup small-cup"><span>250</span>ml</div>
+          <div class="cup small-cup"><span>250</span>ml</div>
+          <div class="cup small-cup"><span>250</span>ml</div>
+          <div class="cup small-cup"><span>250</span>ml</div>
+          <div class="cup small-cup"><span>250</span>ml</div>
+          <div class="cup small-cup"><span>250</span>ml</div>
+          <div class="cup small-cup"><span>250</span>ml</div>
+          <div class="cup small-cup"><span>250</span>ml</div>
+        </div>
+      </div>
+    </section>
+
+    <!--============================================
+                          --project  twelve--                
+    ==============================================-->
+    <section id="projectTwelve">
+      <div class="container">
+        <h1 class="title">project twelve (36 hoverboard)</h1>
+      </div>
+      <div class="container main"><div class="box"></div></div>
+    </section>
+
+    <!--============================================
+                          --project  thirteen--                
+    ==============================================-->
+    <section id="projectThirteen">
+      <div class="container">
+        <h1 class="title">project thirteen (20 button ripple effect)</h1>
+      </div>
+      <div class="container main">
+        <button class="ripple">Click Me</button>
+      </div>
+    </section>
+
+    <!--============================================
+                          --project  fourteen--                
+    ==============================================-->
+    <section id="projectFourteen">
+      <div class="container">
+        <h1 class="title">project fourteen (Snake from FreeCodeCamp)</h1>
+      </div>
+      <div class="container main">
+        <canvas id="gameCanvas" width="300" height="300"></canvas>
+        <div>
+          <div class="score">10</div>
+          <button type="reset" class="reset">Reset</button>
+        </div>
+      </div>
+    </section>
+
+    <!--============================================
+                          --project Fifteen--                
+    ==============================================-->
+    <section id="projectFifteen">
+      <div class="container">
+        <h1 class="title">project Fifteen (autoTextEffect 30)</h1>
+      </div>
+      <div class="container main">
+        <h1 class="text bare">Starting....</h1>
+
+        <label for="speed">Speed:</label>
+        <input
+          type="number"
+          name="speed"
+          class="speed"
+          value="1"
+          min="1"
+          max="5"
+          step="1" />
+      </div>
+    </section>
+
+    <!--============================================
+                          --project Sixteen--                
+    ==============================================-->
+    <section id="projectSixteen">
+      <div class="container">
+        <h1 class="title">project Sixteen (31 password generator)</h1>
+      </div>
+      <div class="container main">
+        <div class="form">
+          <h1>Password Generator</h1>
+          <span>
+            <p class="result"></p>
+            <button class="clipboard">Cp</button>
+          </span>
+          <label
+            >Password Length
+            <input
+              type="number"
+              name="Length"
+              min="4"
+              max="20"
+              step="1"
+              value="20"
+              class="length"
+          /></label>
+          <label
+            >Include uppercase letters
+            <input type="checkbox" name="" id="" class="uppercase"
+          /></label>
+          <label
+            >Include lowercase letters
+            <input type="checkbox" name="" id="" class="lowercase"
+          /></label>
+          <label
+            >Include numbers
+            <input type="checkbox" name="" id="" class="numbers"
+          /></label>
+          <label
+            >Include symbols
+            <input type="checkbox" name="" id="" class="symbols"
+          /></label>
+          <button type="submit" class="submit">Generate Password</button>
+        </div>
+      </div>
+    </section>
+
+    <!--============================================
+                          --project seventeen--                
+    ==============================================-->
+    <section id="project_17">
+      <div class="container">
+        <h1 class="title">project 17</h1>
+      </div>
+      <div class="container main">
+        <div class="card">
+          <span>Don't Laugh Challenge</span>
+          <p>
+            I just got fired from a florist, apparently I took too many leaves.
+          </p>
+          <button type="button">Get Another Joke</button>
+        </div>
+      </div>
+    </section>
+    <!--============================================
+                          --project eightteen--                
+    ==============================================-->
+    <section id="project_18">
+      <div class="container">
+        <h1 class="title">project 18</h1>
+      </div>
+      <div class="container main">
+        <form class="header_18">
+          <input type="search" name="search" id="" placeholder="Search" />
+        </form>
+        <div class="con"></div>
+      </div>
+      <div class="pagination">
+        <button>more</button>
+      </div>
+    </section>
+    <!--============================================
+                          --project 19--                
+    ==============================================-->
+    <section id="project_19">
+      <div class="container">
+        <h1 class="title">project 19</h1>
+      </div>
+      <div class="container main">
+        <div class="cadre">
+          <div class="header">
+            <h4 class="title-19">Live User Filter</h4>
+            <small class="subtitle">Search by name and/or location</small>
+            <input type="text" id="filter" placeholder="Search" />
+          </div>
+
+          <ul id="result" class="user-list">
+            <li>
+              <h3>Loading...</h3>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!--============================================
+                          --project 20--                
+    ==============================================-->
+    <section id="project_20">
+      <div class="container">
+        <h1 class="title">project 20: from the book a game</h1>
+      </div>
+      <div class="container main">
+        <canvas width="300" height="300"></canvas>
+      </div>
+    </section>
+
+    <!--============================================
+                          --project 21--                
+    ==============================================-->
+    <section id="project_21">
+      <div class="container">
+        <h1 class="title">project 21:</h1>
+      </div>
+      <div class="container main">
+        <nav class="active" id="nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Works</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <button class="icon" id="toggle">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+          </button>
+        </nav>
+      </div>
+    </section>
+
+    <!--============================================
+                          --project 22--                
+    ==============================================-->
+    <section id="project_22">
+      <div class="container">
+        <h1 class="title">project 22:</h1>
+      </div>
+      <div class="container main">
+        <div
+          class="slide active"
+          style="
+            background-image: url(./imgs/firstProject/photo-1526779259212-939e64788e3c.avif);
+          "></div>
+        <div
+          class="slide"
+          style="
+            background-image: url(./imgs/firstProject/photo-1527439958599-d15f96255619.avif);
+          "></div>
+        <div
+          class="slide"
+          style="
+            background-image: url(./imgs/firstProject/photo-1608149895899-3668a99d00f6.avif);
+          "></div>
+        <div
+          class="slide"
+          style="
+            background-image: url(./imgs/firstProject/photo-1620677368158-32b1293fac36.avif);
+          "></div>
+      </div>
+    </section>
+
+    <script src="jsProjectsEveryDay.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1388 @@
+/*--================================================--*\
+                          -- general --                   
+\*--================================================--*/
+:root {
+  --primary-color: #1a2456;
+  --secondary-color: #efc2b3;
+  --background-color: #f0efed;
+  --font-color: #080b1b;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 0px) {
+  .container {
+    width: 97%;
+    padding: 10px;
+  }
+}
+@media (min-width: 767px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 991px) {
+  .container {
+    width: 970px;
+    padding: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    font-size: 1.33333333vw;
+    width: 65em;
+  }
+}
+.container .title {
+  display: inline-block;
+  font-size: 30px;
+  text-shadow: var(--secondary-color) 4px 0px 5px;
+  position: relative;
+}
+.container .title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  height: 6px;
+  right: 100%;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  transition: 1s;
+}
+.container .title:hover::after {
+  right: 0;
+}
+/*--================================================--*\
+                        -- header --                     
+\*--================================================--*/
+body {
+  position: relative;
+  padding-top: 80px;
+}
+header {
+  position: fixed;
+  width: 100%;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.4s;
+  z-index: 500;
+}
+header .container {
+  border-radius: 10px;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--secondary-color);
+  max-height: 53px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-size: 18px;
+}
+header .container .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+header .container .logo svg {
+  fill: var(--secondary-color);
+  margin-right: 10px;
+}
+header .container ul li {
+  display: inline-block;
+  font-size: 12.5px;
+}
+header .container ul li:first-child {
+  margin-right: 40px;
+}
+header.hidden {
+  top: 0;
+  transform: translateX(-50%) translateY(-100%);
+}
+.container .title {
+  font-size: 30px;
+  text-shadow: var(--secondary-color) 4px 0px 5px;
+  position: relative;
+}
+.container .title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  height: 6px;
+  right: 100%;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  transition: 1s;
+}
+.container .title:hover::after {
+  right: 0;
+}
+/*--================================================--*\
+                        -- project 01 --                     
+\*--================================================--*/
+#projectOne .container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+#projectOne .container .panel {
+  min-height: calc(97vh - 160px);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 40px;
+  overflow: hidden;
+  position: relative;
+  transition-duration: 1s;
+  flex: 0.5;
+  cursor: pointer;
+}
+#projectOne .container .panel .title {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  color: white;
+  font-size: 25px;
+  opacity: 0;
+  transition: 1s opacity;
+  text-transform: capitalize;
+}
+#projectOne .container .active {
+  flex: 5;
+}
+#projectOne .container .active .title {
+  opacity: 1;
+}
+/*--================================================--*\
+                        -- project two --                     
+\*--================================================--*/
+#projectTwo {
+  padding-top: 80px;
+}
+#projectTwo h1 {
+  display: inline-block;
+}
+#projectTwo .container.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 16px;
+  padding: 100px 0 80px;
+}
+#projectTwo .container.main ul {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0 0 40px;
+}
+#projectTwo .container.main ul li {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+#projectTwo .container.main ul li:not(:first-child) {
+  padding-left: 50px;
+}
+#projectTwo .container.main ul li span {
+  transition: 0.4s;
+  display: inline-block;
+  border: 3px solid #d0d0d7;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 26px;
+  border-radius: 20px;
+}
+#projectTwo .container.main ul li::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: calc(100% - 30px);
+  background-color: #d0d0d7;
+}
+#projectTwo .container.main ul li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: calc(100% - 30px);
+  background-color: #3498db;
+  z-index: 5;
+  transition: 0.4s;
+}
+#projectTwo .container.main ul li.active span {
+  border-color: #3498db;
+}
+#projectTwo .container.main ul li.active::before {
+  left: 0;
+}
+#projectTwo .container.main .btns button {
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-size: 15px;
+  color: white;
+  background-color: #d0d0d7;
+  cursor: pointer;
+}
+#projectTwo .container.main .btns button.active {
+  background-color: #3498db;
+}
+#projectTwo .container.main .btns button:hover {
+  background-color: none;
+}
+/*--================================================--*\
+                        -- project three --                     
+\*--================================================--*/
+#projectThree .container.main {
+  display: flex;
+  height: 100vh;
+  text-align: center;
+  color: white;
+}
+#projectThree .container.main .left {
+  z-index: 1;
+  background-image: url("imgs/ps.jpg");
+  background-size: cover;
+  width: 50%;
+  position: relative;
+  transition: all 1s;
+}
+#projectThree .container.main .left .text a:hover {
+  background-color: #5754ec;
+  border-color: #5754ec;
+}
+#projectThree .container.main .right {
+  z-index: 1;
+  background-image: url("imgs/xbox.jpg");
+  background-size: cover;
+  width: 50%;
+  position: relative;
+  transition: all 1s;
+}
+#projectThree .container.main .right .text a:hover {
+  background-color: #1c7a1c;
+  border-color: #1c7a1c;
+}
+#projectThree .container.main .left .text,
+#projectThree .container.main .right .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 21;
+  color: white;
+}
+#projectThree .container.main .left .text h2,
+#projectThree .container.main .right .text h2 {
+  font-size: 44px;
+  white-space: nowrap;
+}
+#projectThree .container.main .left .text a,
+#projectThree .container.main .right .text a {
+  display: block;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 160px;
+  padding: 15px 15px;
+  border: 2px solid white;
+}
+#projectThree .container.main .left::after,
+#projectThree .container.main .right::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: rgba(87, 84, 236, 0.7);
+  background-color: rgba(43, 43, 43, 0.8);
+  z-index: 20;
+}
+#projectThree .container.main .left::after {
+  background-color: rgba(87, 84, 236, 0.7);
+}
+#projectThree .container.main .right::after {
+  background-color: rgba(43, 43, 43, 0.8);
+}
+#projectThree .hover-left .left {
+  width: 80% !important;
+  z-index: 2 !important;
+}
+#projectThree .hover-left .right {
+  width: 20% !important;
+  z-index: 0 !important;
+}
+#projectThree .hover-right .right {
+  width: 80% !important;
+  z-index: 2 !important;
+}
+#projectThree .hover-right .left {
+  width: 20% !important;
+  z-index: 0 !important;
+}
+/*--================================================--*\
+                        -- ProjectFour --                     
+\*--================================================--*/
+#projectFour {
+  position: relative;
+}
+#projectFour .insert {
+  text-align: center;
+  padding: 150px 0 150px;
+}
+#projectFour .insert .key {
+  border: 1px solid #999;
+  background-color: #eee;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: bold;
+  height: 65.23333px;
+  max-height: 65.23333px;
+  min-height: 65.23333px;
+  flex-direction: column;
+  justify-content: center;
+  margin: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  min-width: 150px;
+  position: relative;
+}
+#projectFour .insert .key small {
+  position: absolute;
+  top: -24px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  color: #555;
+  font-size: 16px;
+}
+#projectFour .hidden .key:first-child,
+#projectFour .hidden .key:nth-child(2),
+#projectFour .hidden .key:nth-child(3) {
+  display: none;
+}
+#projectFour .show .key:nth-child(4) {
+  display: none;
+}
+/*--================================================--*\
+                        -- project five --                     
+\*--================================================--*/
+#projectFive .container.main {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 60px;
+  background-color: white;
+  transition: background-color 1s;
+}
+#projectFive .container.main .button {
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 12px;
+  margin-bottom: 80px;
+  transition: all 1s;
+}
+#projectFive .container.main .button:hover {
+  cursor: pointer;
+}
+#projectFive .container.main .clock {
+  margin-bottom: 60px;
+  position: relative;
+  transform: rotate(-90deg);
+  border: 1px solid black;
+}
+#projectFive .container.main .clock .needle {
+  display: inline-block;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: left;
+  transition: filter 1s, rotate 1s;
+}
+#projectFive .container.main .clock .needle.hours {
+  width: 70px;
+}
+#projectFive .container.main .clock .needle.minutes {
+  width: 100px;
+}
+#projectFive .container.main .clock .needle.seconds {
+  background-color: chocolate;
+  width: 60px;
+  transition: filter 1s;
+}
+#projectFive .container.main .clock .needle.seconds::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 2px solid chocolate;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  background-color: black;
+  transform: translateY(-50%);
+}
+#projectFive .container.main .date {
+  text-align: center;
+}
+#projectFive .container.main .date .time {
+  font-size: 50px;
+  transition: color 1s;
+}
+#projectFive .container.main .date .day {
+  color: gray;
+  font-size: 14px;
+  transition: color 1s;
+}
+#projectFive .container.main .date .day .num {
+  transition: color 1s;
+  padding: 5px;
+  background: black;
+  color: white;
+  border-radius: 50%;
+}
+#projectFive .container.main.dark {
+  background-color: black;
+}
+#projectFive .container.main.dark .button {
+  filter: invert(100%);
+}
+#projectFive .container.main.dark .needle.hours,
+#projectFive .container.main.dark .needle.minutes {
+  filter: invert(100%);
+}
+#projectFive .container.main.dark .needle.seconds::after {
+  background-color: white;
+}
+#projectFive .container.main.dark .date {
+  filter: invert(100%);
+}
+/*--================================================--*\
+                        -- project six --                     
+\*--================================================--*/
+#projectSix .container.main {
+  padding: 100px 0 100px;
+}
+#projectSix .container.main .form {
+  background-color: #eee;
+  border-radius: 6px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+#projectSix .container.main .input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  flex: 1;
+}
+#projectSix .container.main .input:focus {
+  outline: none;
+}
+#projectSix .container.main .add {
+  border: none;
+  background-color: #f44336;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+#projectSix .container.main .tasks {
+  background-color: #eee;
+  margin-top: 20px;
+  border-radius: 6px;
+  padding: 20px;
+}
+#projectSix .container.main .tasks .task {
+  background-color: white;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+#projectSix .container.main .tasks .task:not(:last-child) {
+  margin-bottom: 15px;
+}
+#projectSix .container.main .tasks .task:hover {
+  background-color: #f7f7f7;
+}
+#projectSix .container.main .tasks .task.done {
+  opacity: 0.5;
+}
+#projectSix .container.main .tasks .task span {
+  font-weight: bold;
+  font-size: 10px;
+  background-color: red;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/*--================================================--*\
+                        -- project Seven --                     
+\*--================================================--*/
+#projectSeven .container.main {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+#projectSeven .container.main .slider-container {
+  margin: 10px auto;
+  width: 800px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+#projectSeven .container.main .slider-container img {
+  width: 800px;
+  height: 250px;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s;
+  z-index: 1;
+}
+#projectSeven .container.main .slider-container img.active {
+  opacity: 1;
+}
+#projectSeven .container.main .slider-container .slide-number {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 20px;
+  z-index: 2;
+  border-radius: 6px;
+}
+#projectSeven .container.main .slider-controls {
+  width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+#projectSeven .container.main .slider-controls .prev,
+#projectSeven .container.main .slider-controls .next {
+  background-color: #009688;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 5px;
+  -webkit-user-select: none;
+          user-select: none;
+  width: 20%;
+}
+#projectSeven .container.main .slider-controls .prev {
+  float: left;
+}
+#projectSeven .container.main .slider-controls .next {
+  float: right;
+}
+#projectSeven .container.main .slider-controls .prev.disabled,
+#projectSeven .container.main .slider-controls .next.disabled {
+  background-color: rgba(0, 150, 136, 0.5);
+  cursor: no-drop;
+}
+#projectSeven .container.main .slider-controls .indicators {
+  width: 60%;
+  float: left;
+}
+#projectSeven .container.main .slider-controls .indicators ul {
+  list-style: none;
+  margin: 0;
+  text-align: center;
+}
+#projectSeven .container.main .slider-controls .indicators ul li {
+  display: inline-block;
+  background-color: #f6f6f6;
+  color: #333;
+  font-weight: bold;
+  height: 28px;
+  width: 28px;
+  border-radius: 4px;
+  margin: 0 2px;
+  line-height: 28px;
+  cursor: pointer;
+}
+#projectSeven .container.main .slider-controls .indicators ul li.active {
+  background-color: #009688;
+  color: #fff;
+}
+/*--================================================--*\
+                        -- project eight --                     
+\*--================================================--*/
+#projectEight {
+  background-color: #f0f0f0;
+}
+#projectEight .container.main {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  gap: 20px;
+  max-width: 600px;
+}
+#projectEight .container.main h1 {
+  text-align: center;
+  margin-bottom: 100px;
+}
+#projectEight .container.main .faq {
+  position: relative;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+#projectEight .container.main .faq h3 {
+  margin-bottom: 35px;
+}
+#projectEight .container.main .faq .faq-text {
+  margin: 0;
+}
+#projectEight .container.main .faq .faq-toggle {
+  position: absolute;
+  background-color: black;
+  right: 0px;
+  top: 30px;
+  transform: translate(-50%, -50%);
+}
+#projectEight .container.main .faq .faq-toggle:hover {
+  cursor: pointer;
+}
+#projectEight .container.main .faq.show .faq-toggle {
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#projectEight .container.main .faq.show .faq-toggle::after {
+  content: "";
+  width: 20px;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+#projectEight .container.main .faq.hide .faq-toggle {
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#projectEight .container.main .faq.hide .faq-toggle::after {
+  content: "";
+  padding: 5px;
+  border: 2px solid;
+  border-color: transparent black black transparent;
+  background-color: transparent;
+  position: absolute;
+  top: 25%;
+  left: 3px;
+  transform: translateY(-50%) rotateZ(45deg);
+  z-index: -1;
+}
+#projectEight .container.main .faq.hide h3 {
+  margin: 0;
+}
+#projectEight .container.main .faq.hide p {
+  display: none;
+}
+/*--================================================--*\
+                        -- project nine --                     
+\*--================================================--*/
+#projectNine .container.main {
+  display: flex;
+  justify-content: space-between;
+}
+#projectNine .empty {
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+  border: solid 3px black;
+  background: white;
+}
+#projectNine .fill {
+  background-image: url("imgs/bxs-bolt.svg");
+  height: 145px;
+  width: 145px;
+  cursor: pointer;
+}
+#projectNine .hold {
+  border: solid 5px #ccc;
+}
+#projectNine .hovered {
+  background-color: #333;
+  border-color: white;
+  border-style: dashed;
+}
+/*--================================================--*\
+                        -- project Ten  --                     
+\*--================================================--*/
+@keyframes kinetic-loader {
+  25% {
+    transform: translate(-50%, -50%) rotateZ(180deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotateZ(180deg);
+  }
+  75% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+#projectTen {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+#projectTen .container.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  background-color: #2c3e50;
+}
+#projectTen .container.main .box {
+  position: relative;
+}
+#projectTen .container.main .box::before {
+  content: "";
+  border: 50px solid;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateZ(0deg);
+  border-color: transparent transparent transparent #db8e8e;
+  animation: kinetic-loader 2s 0s infinite;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+#projectTen .container.main .box::after {
+  content: "";
+  border: 50px solid;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateZ(0deg);
+  border-color: transparent transparent #eee transparent;
+  animation: kinetic-loader 2s 0.5s infinite;
+}
+/*--================================================--*\
+                        -- project eleven --                     
+\*--================================================--*/
+#projectEleven {
+  background-color: #3494e4;
+  color: white;
+}
+#projectEleven .container.main {
+  padding-bottom: 100px;
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#projectEleven .container.main h2,
+#projectEleven .container.main h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+#projectEleven .container.main h2 {
+  font-size: 40px;
+}
+#projectEleven .container.main .cup {
+  width: 150px;
+  height: 300px;
+  border: 4px solid #144fc6;
+  color: #144fc6;
+  border-radius: 0 0 40px 40px;
+  position: relative;
+  overflow: hidden;
+}
+#projectEleven .container.main .cup .remained {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  transition: 0.25s ease;
+  gap: 6px;
+}
+#projectEleven .container.main .cup .remained h3 {
+  margin: 0;
+}
+#projectEleven .container.main .cup .remained span {
+  font-size: 14px;
+}
+#projectEleven .container.main .cup .filled {
+  background-color: #6ab3f8;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  transition: 0.25s ease;
+}
+#projectEleven .container.main .small-cup {
+  width: 50px;
+  height: 110px;
+  border-radius: 0 0 20px 20px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: color 0.5s, background-color 0.5s;
+  transition-timing-function: linear;
+}
+#projectEleven .container.main .small-cup:hover {
+  cursor: pointer;
+}
+#projectEleven .container.main .small-cup.full {
+  background-color: #6ab3f8;
+  color: white;
+}
+#projectEleven .container.main .cups {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+/*--================================================--*\
+                        -- project Twelve --                     
+\*--================================================--*/
+#projectTwelve {
+  background-color: #111111;
+  color: white;
+}
+#projectTwelve .container.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+#projectTwelve .container.main .box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 400px;
+}
+#projectTwelve .container.main .box .square {
+  background-color: #1d1d1d;
+  box-shadow: 0 0 2px #000;
+  height: 16px;
+  width: 16px;
+  margin: 2px;
+  transition: 2s ease;
+}
+#projectTwelve .container.main .box .square:hover {
+  transition-duration: 0s;
+}
+/*--================================================--*\
+                        -- project thirteen --                     
+\*--================================================--*/
+#projectThirteen {
+  color: white;
+  background-color: #111111;
+}
+#projectThirteen .container.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+#projectThirteen .container.main button {
+  background-color: purple;
+  color: #fff;
+  border: 1px purple solid;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 20px 30px;
+  overflow: hidden;
+  margin: 10px 0;
+  position: relative;
+}
+#projectThirteen .container.main button:focus {
+  outline: none;
+}
+#projectThirteen .container.main button .circle {
+  position: absolute;
+  background-color: #fff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: scale 0.5s ease-out;
+}
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
+/*--================================================--*\
+                        -- project fourteen --                     
+\*--================================================--*/
+#projectFourteen {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+#projectFourteen .container.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#projectFourteen .container.main .score {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 100px;
+}
+#projectFourteen .container.main #gameCanvas {
+  width: 300px;
+  height: 300px;
+}
+#projectFourteen .container.main #score {
+  text-align: center;
+  font-size: 140px;
+  font-family: "Antic Slab", serif;
+}
+#projectFifteen .container.main {
+  background-color: #144fc6;
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#projectFifteen .container.main h1 {
+  margin-bottom: 40px;
+}
+#projectFifteen .container.main h1.bare {
+  border-right: 2px solid white;
+  padding-right: 5px;
+}
+#projectFifteen .container.main label {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+#projectFifteen .container.main input {
+  padding: 5px;
+  width: 50px;
+  font-size: 18px;
+  border: none;
+  text-align: center;
+}
+#projectFifteen .container.main input:focus {
+  outline: none;
+}
+/*--================================================--*\
+                        -- project Sixteen --                     
+\*--================================================--*/
+#projectSixteen {
+  background-color: #3b3b98;
+  color: white;
+  margin-top: 150px;
+}
+#projectSixteen .container.main {
+  display: flex;
+  justify-content: center;
+}
+#projectSixteen .form {
+  box-shadow: 0 5px 10px #dddddd62;
+  background-color: #23235b;
+  color: white;
+  width: 500px;
+  display: inline-flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 30px 20px;
+}
+#projectSixteen .form span {
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #151537;
+  width: 100%;
+  font-size: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#projectSixteen .form span button {
+  width: unset;
+  margin-right: 0;
+  margin-left: auto;
+}
+#projectSixteen .form h1 {
+  margin-bottom: 25px;
+  align-self: center;
+}
+#projectSixteen .form label {
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 16px;
+}
+#projectSixteen .form label input {
+  float: right;
+}
+#projectSixteen .form label input:hover {
+  cursor: pointer;
+}
+#projectSixteen .form label input[type="number"] {
+  width: 50px;
+}
+#projectSixteen .form button {
+  background-color: #3b3b98;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+#projectSixteen .form button:hover {
+  cursor: pointer;
+}
+/*--================================================--*\
+                        -- project 17--                     
+\*--================================================--*/
+#project_17 {
+  background-color: #686de0;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+#project_17 .card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 60px;
+  text-align: center;
+  max-width: 800px;
+  min-height: 350px;
+  margin: auto;
+}
+#project_17 .card span {
+  font-size: 24px;
+  color: #7e7e7e;
+}
+#project_17 .card p {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  font-size: 30px;
+}
+#project_17 .card button {
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-size: 19px;
+  background-color: #9f68e0;
+  color: white;
+  cursor: pointer;
+}
+/*--================================================--*\
+                        -- project 18 --                     
+\*--================================================--*/
+#project_18 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #22254b;
+  min-height: 100vh;
+  color: white;
+}
+#project_18 .header_18 {
+  background-color: #373b69;
+  padding: 10px;
+}
+#project_18 .header_18 input {
+  padding: 10px 15px;
+  border-radius: 30px;
+  margin-right: 0px;
+  margin-left: calc(100% - 251px);
+  display: inline-block;
+  border: 2px solid #22254b;
+  background: #373b69;
+  color: #7378c5;
+  font-size: 18px;
+  transition: all 0.5s;
+}
+#project_18 .header_18 input:focus {
+  color: white;
+  background-color: #22254b;
+}
+#project_18 .con {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  justify-content: center;
+  padding: 20px 0px;
+  gap: 20px;
+}
+#project_18 .con .card {
+  height: 450px;
+  background-color: #373b69;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+#project_18 .con .card img {
+  width: 100%;
+  height: auto;
+  max-height: 80%;
+}
+#project_18 .con .card:hover .card-overview {
+  transform: translateY(0%);
+}
+#project_18 .con .card .card-overview {
+  position: absolute;
+  width: 280px;
+  width: 100%;
+  max-height: 100%;
+  transform: translateY(101%);
+  bottom: 0;
+  left: 0;
+  background: white;
+  color: black;
+  z-index: 10;
+  transition: transform 0.5s;
+  padding: 10px;
+  overflow-y: auto;
+}
+#project_18 .con .card .card-overview h3 {
+  padding: 20px 20px 0;
+}
+#project_18 .con .card .card-overview p {
+  margin: 0;
+  padding: 20px;
+}
+#project_18 .con .card .card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+#project_18 .con .card .card-title span {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #22254b;
+}
+#project_18 .pagination {
+  text-align: center;
+}
+#project_18 .pagination button {
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 19px;
+  background-color: #22254b;
+  color: #686de0;
+}
+/*--================================================--*\
+                        -- project 19 --                        
+\*--================================================--*/
+#project_19 {
+  padding: 40px 0;
+  min-height: 80vh;
+}
+#project_19 .container.main .cadre {
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 300px;
+  margin: auto;
+}
+#project_19 .container.main .title-19 {
+  margin: 0;
+}
+#project_19 .container.main .subtitle {
+  display: inline-block;
+  margin: 5px 0 20px;
+  opacity: 0.8;
+}
+#project_19 .container.main .header {
+  background-color: #3e57db;
+  color: #fff;
+  padding: 30px 20px;
+}
+#project_19 .container.main .header input {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 0;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 15px;
+  width: 100%;
+}
+#project_19 .container.main .header input:focus {
+  outline: none;
+}
+#project_19 .container.main .user-list {
+  background-color: #fff;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  max-height: 400px;
+  overflow-y: auto;
+}
+#project_19 .container.main .user-list li {
+  display: flex;
+  padding: 20px;
+}
+#project_19 .container.main .user-list img {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 50px;
+  width: 50px;
+}
+#project_19 .container.main .user-list .user-info {
+  margin-left: 10px;
+}
+#project_19 .container.main .user-list .user-info h4 {
+  margin: 0 0 10px;
+}
+#project_19 .container.main .user-list .user-info p {
+  font-size: 12px;
+}
+#project_19 .container.main .user-list li:not(:last-of-type) {
+  border-bottom: 1px solid #eee;
+}
+#project_19 .container.main .user-list li.hide {
+  display: none;
+}
+/*--================================================--*\
+                        -- project 20 --                     
+\*--================================================--*/
+#project_20 .container.main canvas {
+  margin: auto;
+  display: block;
+}
+/*--================================================--*\
+                        -- project 21 --                     
+\*--================================================--*/
+#project_21 .container.main {
+  background-color: #eafbff;
+  background-image: linear-gradient(to bottom, #eafbff 0%, #eafbff 50%, #5290f9 50%, #5290f9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: auto;
+}
+#project_21 nav {
+  background-color: #fff;
+  padding: 20px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: width 0.6s linear;
+  overflow-x: hidden;
+}
+#project_21 nav.active {
+  width: 350px;
+}
+#project_21 nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 0;
+  transition: width 0.6s linear;
+}
+#project_21 nav.active ul {
+  width: 100%;
+}
+#project_21 nav ul li {
+  transform: rotateY(0deg);
+  opacity: 0;
+  transition: transform 0.6s linear, opacity 0.6s linear;
+}
+#project_21 nav.active ul li {
+  opacity: 1;
+  transform: rotateY(360deg);
+}
+#project_21 nav ul a {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+  margin: 0 10px;
+}
+#project_21 .icon {
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  height: 30px;
+  width: 30px;
+}
+#project_21 .icon:focus {
+  outline: 0;
+}
+#project_21 .icon .line {
+  background-color: #5290f9;
+  height: 2px;
+  width: 20px;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  transition: transform 0.6s linear;
+}
+#project_21 .icon .line2 {
+  top: auto;
+  bottom: 10px;
+}
+#project_21 nav.active .icon .line1 {
+  transform: rotate(-765deg) translateY(5.5px);
+}
+#project_21 nav.active .icon .line2 {
+  transform: rotate(765deg) translateY(-5.5px);
+}
+/*--================================================--*\
+                        -- project 22 --                     
+\*--================================================--*/
