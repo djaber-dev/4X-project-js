@@ -1,4 +1,7 @@
-/*--================================================--*\
+import Carousel3D from "https://cdn.jsdelivr.net/npm/3d-carousel-js@latest/dist/index.module.js";
+// The custom element can have any name you want.
+customElements.define("carousel-3d", Carousel3D);
+/* --================================================ --*\
                         -- header --                     
 \*--================================================--*/
 // Select the header element in the DOM
@@ -1080,3 +1083,7 @@ const toggle21 = document.querySelector("#project_21 toggle");
 const nav21 = document.querySelector("#project_21 nav");
 
 toggle.addEventListener("click", () => nav.classList.toggle("active"));
+
+/*--================================================--*\
+                        -- project 23 --                     
+\*--================================================--*/

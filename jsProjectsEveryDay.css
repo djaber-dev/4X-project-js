@@ -1386,3 +1386,70 @@ header.hidden {
 /*--================================================--*\
                         -- project 22 --                     
 \*--================================================--*/
+#project_22 {
+  height: 100vh;
+  background-image: url(imgs/firstProject/photo-1620677368158-32b1293fac36.avif);
+  background-position: center center;
+  background-size: cover;
+  transition: background 2s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+#project_22::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.555);
+  z-index: 1;
+}
+#project_22 .container:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+#project_22 .container.main {
+  z-index: 3;
+  padding-bottom: 20px;
+  position: relative;
+  width: 70vw;
+  height: 70vh;
+  overflow-y: hidden;
+}
+#project_22 .container.main .slide {
+  width: 70vw;
+  height: 70vh;
+  background-position: center center;
+  background-size: 143%;
+  position: absolute;
+  top: 6vh;
+  left: 0;
+}
+#project_22 .container.main .btns {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translate(-50%);
+}
+#project_22 .container.main .btns button {
+  border: 6px solid #ffd900;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+}
+/*--================================================--*\
+                        -- project 23 --                     
+\*--================================================--*/
+#project_23 {
+  height: 100vh;
+}
+#project_23 .container.main {
+  height: 100%;
+  position: relative;
+}
